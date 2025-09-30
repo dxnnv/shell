@@ -83,7 +83,6 @@ JsonObject {
         property bool showKbLayout: false
         property bool showNetwork: true
         property bool showBluetooth: true
-        property bool showBattery: true
         property bool showLockStatus: true
     }
 
@@ -92,10 +91,9 @@ JsonObject {
     }
 
     component Sizes: JsonObject {
-        property int innerWidth: 40
+        property int innerHeight: 40
         property int windowPreviewSize: 400
         property int trayMenuWidth: 300
-        property int batteryWidth: 250
         property int networkWidth: 320
     }
 }

@@ -335,42 +335,6 @@ Item {
                     spacing: Appearance.spacing.small / 2
 
                     StyledText {
-                        text: root.device?.batteryAvailable ? qsTr("Device battery (%1%)").arg(root.device.battery * 100) : qsTr("Battery unavailable")
-                    }
-
-                    RowLayout {
-                        Layout.topMargin: Appearance.spacing.small / 2
-                        Layout.fillWidth: true
-                        Layout.preferredHeight: Appearance.padding.smaller
-                        spacing: Appearance.spacing.small / 2
-
-                        StyledRect {
-                            Layout.fillHeight: true
-                            implicitWidth: root.device?.batteryAvailable ? parent.width * root.device.battery : 0
-                            radius: Appearance.rounding.full
-                            color: Colours.palette.m3primary
-                        }
-
-                        StyledRect {
-                            Layout.fillWidth: true
-                            Layout.fillHeight: true
-                            radius: Appearance.rounding.full
-                            color: Colours.palette.m3secondaryContainer
-
-                            StyledRect {
-                                anchors.right: parent.right
-                                anchors.top: parent.top
-                                anchors.bottom: parent.bottom
-                                anchors.margins: parent.height * 0.25
-
-                                implicitWidth: height
-                                radius: Appearance.rounding.full
-                                color: Colours.palette.m3primary
-                            }
-                        }
-                    }
-
-                    StyledText {
                         Layout.topMargin: Appearance.spacing.normal
                         text: qsTr("Dbus path")
                     }

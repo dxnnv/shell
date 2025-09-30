@@ -44,11 +44,6 @@ Item {
         }
 
         Popout {
-            name: "battery"
-            source: "Battery.qml"
-        }
-
-        Popout {
             name: "audio"
             sourceComponent: Audio {
                 wrapper: root.wrapper
@@ -108,8 +103,8 @@ Item {
         required property string name
         property bool shouldBeActive: root.wrapper.currentName === name
 
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.right: parent.right
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: parent.top
 
         opacity: 0
         scale: 0.8

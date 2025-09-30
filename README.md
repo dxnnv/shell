@@ -255,30 +255,6 @@ default, you must create it manually.
             "playback": ["mpv"],
             "explorer": ["thunar"]
         },
-        "battery": {
-            "warnLevels": [
-                {
-                    "level": 20,
-                    "title": "Low battery",
-                    "message": "You might want to plug in a charger",
-                    "icon": "battery_android_frame_2"
-                },
-                {
-                    "level": 10,
-                    "title": "Did you see the previous message?",
-                    "message": "You should probably plug in a charger <b>now</b>",
-                    "icon": "battery_android_frame_1"
-                },
-                {
-                    "level": 5,
-                    "title": "Critical battery level",
-                    "message": "PLUG THE CHARGER RIGHT NOW!!",
-                    "icon": "battery_android_alert",
-                    "critical": true
-                }
-            ],
-            "criticalLevel": 3
-        },
         "idle": {
             "lockBeforeSleep": true,
             "inhibitWhenAudio": true,
@@ -363,7 +339,6 @@ default, you must create it manually.
         "showOnHover": true,
         "status": {
             "showAudio": false,
-            "showBattery": true,
             "showBluetooth": true,
             "showKbLayout": false,
             "showMicrophone": false,
@@ -530,7 +505,9 @@ default, you must create it manually.
         "clearThreshold": 0.3,
         "defaultExpireTimeout": 5000,
         "expandThreshold": 20,
-        "expire": false
+        "expire": false,
+        "timeoutBar": false,
+        "timeoutCircle": false,
     },
     "osd": {
         "enabled": true,
@@ -603,9 +580,6 @@ programs.caelestia = {
     environment = [];
   };
   settings = {
-    bar.status = {
-      showBattery = false;
-    };
     paths.wallpaperDir = "~/Images";
   };
   cli = {
