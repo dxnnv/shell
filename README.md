@@ -526,7 +526,10 @@ default, you must create it manually.
         "gpuType": "",
         "playerAliases": [{ "from": "com.github.th_ch.youtube_music", "to": "YT Music" }],
         "weatherLocation": "",
-        "useFahrenheit": false,
+        "useFahrenheit": {
+            "performance": false,
+            "weather": true
+        },
         "useTwelveHourClock": false,
         "smartScheme": true,
         "visualiserBars": 45
